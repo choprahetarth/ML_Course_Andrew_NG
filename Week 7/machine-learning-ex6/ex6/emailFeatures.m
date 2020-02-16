@@ -9,7 +9,7 @@ n = 1899;
 
 % You need to return the following variables correctly.
 x = zeros(n, 1);
-
+len = length(word_indices);
 % ====================== YOUR CODE HERE ======================
 % Instructions: Fill in this function to return a feature vector for the
 %               given email (word_indices). To help make it easier to 
@@ -47,7 +47,9 @@ x = zeros(n, 1);
 %              x = [ 0 0 0 0 1 0 0 0 ... 0 0 0 0 1 ... 0 0 0 1 0 ..];
 %
 %
-
+for i = 1:len
+    x(word_indices(i),1) = 1;
+end
 
 
 
